@@ -1,0 +1,19 @@
+{
+  "name": "clipboard-landing-page",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "index.js",
+  "scripts": {
+    "scripts": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pivanta/Clipboard-Landing-Page.git"
+  },
+  "author": "Abdul Basit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pivanta/Clipboard-Landing-Page/issues"
+  },
+  "homepage": "https://github.com/Pivanta/Clipboard-Landing-Page#readme"
+}

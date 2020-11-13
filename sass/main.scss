@@ -1,0 +1,372 @@
+////////////////////////////////////////////////////////////////////////////
+//                                                                        //
+//                             GLOBAL STARTS                              //
+//                                                                        //
+////////////////////////////////////////////////////////////////////////////
+
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+$base-font-color: hsl(210, 10%, 33%);
+$base-font-weight: 700;
+$inner-font-color: hsl(201, 11%, 66%);
+$inner-font-weight: 400;
+
+@mixin h1 {
+  font-size: 1.4rem;
+  color: $base-font-color;
+  font-weight: $base-font-weight;
+  margin-bottom: 1rem;
+}
+@mixin h2 {
+  font-size: 1.2rem;
+  color: $base-font-color;
+  font-weight: $base-font-weight;
+  margin-bottom: 1rem;
+}
+@mixin h3 {
+  font-size: 0.9rem;
+  font-weight: $base-font-weight;
+  color: $base-font-color;
+}
+@mixin paragraph {
+  color: $inner-font-color;
+  font-size: 0.7rem;
+  font-weight: $inner-font-weight;
+  line-height: 1.6;
+}
+@mixin footer-p {
+  color: $base-font-color;
+  font-size: 0.7rem;
+  margin-bottom: 0;
+  text-decoration: none;
+  display: block;
+}
+@mixin button($width: null, $background-color: null) {
+  width: $width;
+  max-width: 500px;
+  padding: 0.6rem;
+  border-radius: 34px;
+  border: none;
+  outline: none;
+  box-shadow: 20px 20px 50px grey;
+  color: rgb(217, 217, 217);
+  background-color: $background-color;
+  font-size: 0.9rem;
+  font-weight: $base-font-weight;
+  letter-spacing: 1px;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 112.5%;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+body {
+  overflow-x: hidden;
+  background: url("/images/bg-header-mobile.png") no-repeat;
+  background-size: contain;
+  text-align: center;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.8rem;
+}
+////////////////////////////////////////////////////////////////////////////
+//                                                                        //
+//                             GLOBAL ENDS                                //
+//                                                                        //
+////////////////////////////////////////////////////////////////////////////
+
+//  HEADER STARTS //
+.logo {
+  margin: 3rem 0 3rem 0;
+}
+.title {
+  h1 {
+    @include h1;
+  }
+  p {
+    @include paragraph;
+  }
+}
+// HEADER ENDS //
+
+//  BUTTON CONTAINER STARTS //
+.button_container {
+  margin: 3rem 0 3rem 0;
+  .ios {
+    @include button($width: 90%, $background-color: hsl(171, 66%, 44%));
+    margin-bottom: 1rem;
+  }
+  .mac {
+    @include button($width: 90%, $background-color: hsl(233, 100%, 69%));
+  }
+}
+//  BUTTON CONTAINER ENDS //
+
+//  ARTICLE ONE STARTS //
+.article_one {
+  h2 {
+    @include h2;
+  }
+  p {
+    @include paragraph;
+  }
+}
+// ARTICLE ONE ENDS //
+
+// DEVICE IMAGES STARTS //
+.mac_image,
+.tablet_image {
+  margin: 3rem auto;
+  img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+}
+
+// DEVICE IMAGES END //
+
+// CENTER SECTION STARTS //
+.center_section_container {
+  margin: 3rem;
+  .content {
+    padding-bottom: 2.5rem;
+    h3 {
+      @include h3;
+    }
+    p {
+      @include paragraph;
+      padding-top: 0.7rem;
+    }
+  }
+}
+// CENTER SECTION ENDS //
+
+// GRID ARTICLE TWO STARTS //
+.article_two {
+  h2 {
+    @include h2;
+  }
+  p {
+    @include paragraph;
+  }
+}
+.article_three {
+  h2 {
+    @include h2;
+  }
+  p {
+    @include paragraph;
+  }
+  margin: 3rem;
+}
+// ARTICLE TWO ENDS //
+
+// GRID CONTAINER ONE STARTS //
+.grid_container_one {
+  .content {
+    margin-top: 2rem;
+    h3 {
+      @include h3;
+      padding-top: 1rem;
+    }
+    p {
+      @include paragraph;
+      padding-top: 1rem;
+      font-size: 0.7rem;
+    }
+    .image {
+      height: 40px;
+      margin: auto;
+      img {
+        width: 40px;
+      }
+    }
+  }
+  :nth-child(3) {
+    img {
+      padding-top: 0.5rem;
+    }
+  }
+}
+// GRID CONTAINER ONE ENDS //
+
+// GRID CONTAINER TWO STARTS //
+.grid_container_two {
+  margin: 3rem 0;
+  .c_logo {
+    padding-top: 2rem;
+    img {
+      max-width: 120px;
+    }
+  }
+}
+// GRID CONTAINER TWO ENDS //
+
+// FOOTER STARTS //
+.grid_container_three {
+  background-color: rgb(225, 225, 225);
+  a {
+    @include footer-p;
+    padding-top: 1rem;
+  }
+  .footer_logo {
+    padding-top: 2rem;
+    img {
+      max-width: 70px;
+    }
+  }
+}
+.footer_link_container {
+  margin-bottom: 1.5rem;
+  a:hover {
+    color: hsl(171, 66%, 44%);
+  }
+}
+.social_icons {
+  text-align: center;
+  img {
+    padding: 0.5rem;
+  }
+}
+.credit {
+  padding: 2rem;
+  background-color: rgb(225, 225, 225);
+  @include paragraph;
+  color: black;
+}
+// FOOTER ENDS //
+
+////////////////////////////////////////////////////////////////////////////
+//                                                                        //
+//                      MOBILE 500px STARTS                               //
+//                                                                        //
+////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (min-width: 500px) {
+  .wrapper {
+    max-width: 700px;
+  }
+  .button_container {
+    .ios {
+      @include button($width: 45%);
+      margin: 0 1rem;
+    }
+    .mac {
+      @include button($width: 45%);
+    }
+  }
+  .grid_container_one {
+    display: flex;
+    .content {
+      width: 300px;
+      margin: 0 0.5rem;
+    }
+  }
+  .grid_container_two {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    .c_logo {
+      grid-column: span 2;
+    }
+    :nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+//                                                                        //
+//                      MOBILE 500px ENDS                                 //
+//                                                                        //
+////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////
+//                                                                        //
+//                      MOBILE 1000px STARTS                              //
+//                                                                        //
+////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (min-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  .wrapper {
+    position: relative;
+    max-width: 800px;
+  }
+  .title,
+  .article_one,
+  .article_two,
+  .title_bottom {
+    max-width: 500px;
+    margin: auto;
+  }
+  .button_container {
+    .ios {
+      @include button($width: 30%);
+      margin: 0 1rem;
+    }
+    .mac {
+      @include button($width: 30%);
+    }
+  }
+  .mac_image {
+    width: 100%;
+    position: absolute;
+    left: -430px;
+  }
+  .center_section_container {
+    position: relative;
+    width: 300px;
+    text-align: left;
+    left: 350px;
+    padding-top: 2rem;
+  }
+  .grid_container_two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0 6rem 0;
+    .c_logo {
+      padding: 0 1rem;
+    }
+  }
+  .grid_container_three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding-top: 2rem;
+    .footer_logo {
+      padding: 0;
+      img {
+        max-width: 70px;
+      }
+    }
+    .footer_link_container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .footer_links {
+      width: 130px;
+      text-align: left;
+    }
+  }
+}
+////////////////////////////////////////////////////////////////////////////
+//                                                                        //
+//                      MOBILE 1000px ENDS                                //
+//                                                                        //
+////////////////////////////////////////////////////////////////////////////
